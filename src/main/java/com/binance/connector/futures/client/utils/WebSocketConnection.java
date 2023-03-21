@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.utils;
+package com.binance.connector.futures.client.utils;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import okhttp3.OkHttpClient;

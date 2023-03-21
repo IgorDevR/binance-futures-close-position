@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.UI;
+package com.binance.connector.futures.conn.UI;
 
 import com.binance.connector.futures.conn.util.file.FilesHandler;
 import java.awt.FlowLayout;

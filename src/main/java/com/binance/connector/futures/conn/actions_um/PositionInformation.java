@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.actions_um;
+package com.binance.connector.futures.conn.actions_um;
 
 import com.binance.connector.futures.client.exceptions.BinanceClientException;
 import com.binance.connector.futures.client.exceptions.BinanceConnectorException;

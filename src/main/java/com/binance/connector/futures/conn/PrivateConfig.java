@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn;
+package com.binance.connector.futures.conn;
 
 public final class PrivateConfig {
 

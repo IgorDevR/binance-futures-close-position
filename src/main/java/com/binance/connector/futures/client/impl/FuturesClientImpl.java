@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.impl;
+package com.binance.connector.futures.client.impl;
 
 import com.binance.connector.futures.client.FuturesClient;
 import com.binance.connector.futures.client.utils.ProxyAuth;

@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.UI;
+package com.binance.connector.futures.conn.UI;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;

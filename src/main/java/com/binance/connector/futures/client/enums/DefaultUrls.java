@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.enums;
+package com.binance.connector.futures.client.enums;
 
 public final class DefaultUrls {
     public static final String TESTNET_URL = "https://testnet.binancefuture.com";

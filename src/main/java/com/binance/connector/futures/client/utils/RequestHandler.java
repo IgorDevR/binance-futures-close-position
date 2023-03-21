@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.utils;
+package com.binance.connector.futures.client.utils;
 
 import com.binance.connector.futures.client.enums.HttpMethod;
 import com.binance.connector.futures.client.enums.RequestType;

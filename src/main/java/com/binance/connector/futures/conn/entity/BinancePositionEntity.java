@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.entity;
+package com.binance.connector.futures.conn.entity;
 
 import com.binance.connector.futures.conn.util.enums.PositionSideEnum;
 import java.math.BigDecimal;

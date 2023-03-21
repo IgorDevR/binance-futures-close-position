@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.service;
+package com.binance.connector.futures.conn.service;
 
 public class OrdersService {
 

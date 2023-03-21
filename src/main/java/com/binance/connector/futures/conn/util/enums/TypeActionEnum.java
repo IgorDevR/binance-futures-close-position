@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.util.enums;
+package com.binance.connector.futures.conn.util.enums;
 /**
  * типы возможных действий
  */

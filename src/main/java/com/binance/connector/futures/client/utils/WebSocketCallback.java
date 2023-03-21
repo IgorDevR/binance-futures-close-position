@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.utils;
+package com.binance.connector.futures.client.utils;
 
 @FunctionalInterface
 public interface WebSocketCallback {

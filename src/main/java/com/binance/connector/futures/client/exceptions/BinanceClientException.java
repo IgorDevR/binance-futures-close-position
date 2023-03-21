@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.exceptions;
+package com.binance.connector.futures.client.exceptions;
 
 public class BinanceClientException extends RuntimeException {
     private static final long serialVersionUID = 1L;

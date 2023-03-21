@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.mapper;
+package com.binance.connector.futures.conn.mapper;
 
 
 import com.binance.connector.futures.conn.Dto.BinancePositionDto;

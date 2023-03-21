@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.positionStorage;
+package com.binance.connector.futures.conn.positionStorage;
 
 import com.binance.connector.futures.conn.Dto.BinancePositionDto;
 import com.binance.connector.futures.conn.Dto.PositionForJTableDto;

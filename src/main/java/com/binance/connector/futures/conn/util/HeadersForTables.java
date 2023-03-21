@@ -1,10 +1,10 @@
-package com.example.binancefuturescloseposition.futures.conn.util;
+package com.binance.connector.futures.conn.util;
 
 
 
-import com.example.binancefuturescloseposition.futures.conn.Dto.BinancePositionDto;
-import com.example.binancefuturescloseposition.futures.conn.Dto.PositionForJTableDto;
-import com.example.binancefuturescloseposition.futures.conn.util.enums.TypeActionEnum;
+import com.binance.connector.futures.conn.Dto.BinancePositionDto;
+import com.binance.connector.futures.conn.Dto.PositionForJTableDto;
+import com.binance.connector.futures.conn.util.enums.TypeActionEnum;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 

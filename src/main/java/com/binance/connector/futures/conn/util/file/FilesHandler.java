@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.util.file;
+package com.binance.connector.futures.conn.util.file;
 
 import com.binance.connector.futures.conn.PrivateConfig;
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.utils;
+package com.binance.connector.futures.client.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

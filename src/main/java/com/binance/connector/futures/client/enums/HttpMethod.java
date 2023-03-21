@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client.enums;
+package com.binance.connector.futures.client.enums;
 
 public enum HttpMethod {
     POST,

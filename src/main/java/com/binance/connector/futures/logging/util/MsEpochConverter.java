@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.logging.util;
+package com.binance.connector.futures.logging.util;
 
 import ch.qos.logback.classic.pattern.ClassicConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;

@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.conn.entity;
+package com.binance.connector.futures.conn.entity;
 
 import lombok.Getter;
 import lombok.Setter;

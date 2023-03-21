@@ -1,4 +1,4 @@
-package com.example.binancefuturescloseposition.futures.client;
+package com.binance.connector.futures.client;
 
 import com.binance.connector.futures.client.impl.futures.Account;
 import com.binance.connector.futures.client.impl.futures.Market;
