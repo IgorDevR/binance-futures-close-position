@@ -16,9 +16,10 @@ public class FilesHandler {
 
   private final String FILENAME = "apiKey.txt";
 
-  public void saveToFile(String apiKey, String apiSecretFieldText, String urlServer) {
+  public void saveToFile(String apiKey, String apiSecretFieldText, String urlServerUM,
+      String urlServerCM) {
 
-    changeKeysInPrivateConfigFiles(apiKey, apiSecretFieldText,urlServer);
+    changeKeysInPrivateConfigFiles(apiKey, apiSecretFieldText, urlServerUM, urlServerUM);
 
     FileWriter fileWriter = null;
     BufferedWriter bufferedWriter = null;
@@ -29,7 +30,9 @@ public class FilesHandler {
       bufferedWriter.newLine();
       bufferedWriter.write(apiSecretFieldText);
       bufferedWriter.newLine();
-      bufferedWriter.write(urlServer);
+      bufferedWriter.write(urlServerUM);
+      bufferedWriter.newLine();
+      bufferedWriter.write(urlServerCM);
     } catch (IOException e) {
       throw new RuntimeException(e);
     } finally {
@@ -54,7 +57,7 @@ public class FilesHandler {
 
   public String[] loadFromFile() {
     File file = new File(FILENAME);
-    String[] keys = new String[3];
+    String[] keys = new String[4];
     if (!file.exists()) {
       // Если файл не существует, ничего не делаем
       return new String[0];
@@ -63,17 +66,20 @@ public class FilesHandler {
       keys[0] = reader.readLine();
       keys[1] = reader.readLine();
       keys[2] = reader.readLine();
+      keys[3] = reader.readLine();
     } catch (IOException e) {
       e.printStackTrace();
     }
-    changeKeysInPrivateConfigFiles(keys[0],keys[1],keys[2]);
+    changeKeysInPrivateConfigFiles(keys[0], keys[1], keys[2], keys[3]);
     return keys;
   }
 
-  public void changeKeysInPrivateConfigFiles(String apiKey, String apiSecretField, String urlServer) {
-    PrivateConfig.TESTNET_API_KEY = apiKey;
-    PrivateConfig.TESTNET_SECRET_KEY = apiSecretField;
-    PrivateConfig.TESTNET_BASE_URL = urlServer;
+  public void changeKeysInPrivateConfigFiles(String apiKey, String apiSecretField,
+      String urlServerUm, String urlServerCm) {
+    PrivateConfig.API_KEY = apiKey;
+    PrivateConfig.SECRET_KEY = apiSecretField;
+    PrivateConfig.UM_BASE_URL = urlServerUm;
+    PrivateConfig.CM_BASE_URL = urlServerCm;
 
   }
 

@@ -16,7 +16,7 @@ public class Main {
     SpringApplication.run(Main.class, args);
     System.setProperty("java.awt.headless", "false");
     MainWindowUI mainWindowUI = new MainWindowUI();
-//    PositionsService uiViewModel = new PositionsService();
+//    PositionsServiceUM uiViewModel = new PositionsServiceUM();
 
   }
 

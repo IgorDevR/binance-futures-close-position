@@ -1,6 +1,6 @@
 package com.binance.connector.futures.conn.UI;
 
-import com.binance.connector.futures.conn.service.PositionsService;
+import com.binance.connector.futures.conn.service.PositionsServiceUM;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -66,8 +66,8 @@ public class ClosePositionDialogUI extends JDialog {
 
   private void onOK(ActionEvent e, DefaultTableModel openPositionTableModel,
       JTable openPositionTable) {
-    PositionsService.closeSelectPosition(openPositionTable);
-    OpenPositionFillTable.fill(openPositionTableModel,openPositionTable);
+    PositionsServiceUM.closeSelectPosition(openPositionTable);
+    OpenPositionFillTable.fillForClosePosBTN(openPositionTableModel,openPositionTable);
     dispose();
   }
 

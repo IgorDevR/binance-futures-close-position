@@ -5,10 +5,13 @@ import java.awt.FlowLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.Action;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -30,26 +33,40 @@ public class MainWindowUI extends JFrame {
     getOpenPositionsButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        OpenPositionFillTable.fill(openPositionTableModel, openPositionTable);
+
+        if (USDTCheckBox != null && USDTCheckBox.isSelected()) {
+          OpenPositionFillTable.fillUM(openPositionTableModel, openPositionTable);
+
+        }
+        if (COINMCheckBox != null && COINMCheckBox.isSelected()) {
+          OpenPositionFillTable.fillCM(openPositionTableModel, openPositionTable);
+
+        }
+
+
       }
     });
-
+/**
+ * сохранить ключи кнопка
+ */
     saveKeysButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         if (!apiKeyField.getText().isEmpty() && !apiSecretField.getText().isEmpty()) {
           FilesHandler filesHandler = new FilesHandler();
           filesHandler.saveToFile(apiKeyField.getText(),
-              apiSecretField.getText(), urlServerTextField.getText());
+              apiSecretField.getText(), urlServerUSDTTextField.getText(),
+              urlServerCoinMTextField.getText());
         }
       }
     });
     FilesHandler filesHandler = new FilesHandler();
     String[] keys = filesHandler.loadFromFile();
-    if(keys.length > 0){
+    if (keys.length > 0) {
       apiKeyField.setText(keys[0]);
       apiSecretField.setText(keys[1]);
-      urlServerTextField.setText(keys[2]);
+      urlServerUSDTTextField.setText(keys[2]);
+      urlServerCoinMTextField.setText(keys[3]);
     }
 
 
@@ -68,7 +85,10 @@ public class MainWindowUI extends JFrame {
   private JButton cancelClosePosButton;
   private JTable openPositionTable;
   private JButton getOpenPositionsButton;
-  private JTextField urlServerTextField;
+  private JTextField urlServerUSDTTextField;
+  private JTextField urlServerCoinMTextField;
+  private JCheckBox USDTCheckBox;
+  private JCheckBox COINMCheckBox;
   private DefaultTableModel openPositionTableModel;
 
 
@@ -80,7 +100,6 @@ public class MainWindowUI extends JFrame {
     openPositionTableModel = createComponent.getDefaultTableModel();
     openPositionTable = createComponent.getJtable();
   }
-
 
 
 }

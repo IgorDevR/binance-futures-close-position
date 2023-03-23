@@ -12,21 +12,21 @@ import java.util.LinkedHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public final class NewOrder {
+public final class NewOrderUM {
 
-  private NewOrder() {
+  private NewOrderUM() {
   }
 
 
-  private static final Logger logger = LoggerFactory.getLogger(NewOrder.class);
+  private static final Logger logger = LoggerFactory.getLogger(NewOrderUM.class);
 
   public static String newOrder(String symbol, OrderSideEnum side, PositionSideEnum positionSide,
       TypeOrderEnum typeOrderEnum,
       BigDecimal quantity, BigDecimal price) {
     LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
 
-    UMFuturesClientImpl client = new UMFuturesClientImpl(PrivateConfig.TESTNET_API_KEY,
-        PrivateConfig.TESTNET_SECRET_KEY, PrivateConfig.TESTNET_BASE_URL);
+    UMFuturesClientImpl client = new UMFuturesClientImpl(PrivateConfig.API_KEY,
+        PrivateConfig.SECRET_KEY, PrivateConfig.UM_BASE_URL);
 
     parameters.put("symbol", symbol);
     parameters.put("side", side.name());

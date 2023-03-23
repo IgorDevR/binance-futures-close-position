@@ -1,20 +1,20 @@
-package com.binance.connector.futures.conn.actions_um;
+package com.binance.connector.futures.conn.actions_cm;
 
 import com.binance.connector.futures.client.exceptions.BinanceClientException;
 import com.binance.connector.futures.client.exceptions.BinanceConnectorException;
-import com.binance.connector.futures.client.impl.UMFuturesClientImpl;
+import com.binance.connector.futures.client.impl.CMFuturesClientImpl;
 import com.binance.connector.futures.conn.PrivateConfig;
 import com.binance.connector.futures.conn.UI.ErrorUI;
 import java.util.LinkedHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public final class PositionInformation {
+public final class PositionInformationCM {
 
-  private PositionInformation() {
+  private PositionInformationCM() {
   }
 
-  private static final Logger logger = LoggerFactory.getLogger(PositionInformation.class);
+  private static final Logger logger = LoggerFactory.getLogger(PositionInformationCM.class);
 
   /**
    * получить все позиции в том числе неоткрытые, другого варианта нет
@@ -24,8 +24,8 @@ public final class PositionInformation {
   public static String getAllPositions() {
     LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
 
-    UMFuturesClientImpl client = new UMFuturesClientImpl(PrivateConfig.TESTNET_API_KEY,
-        PrivateConfig.TESTNET_SECRET_KEY, PrivateConfig.TESTNET_BASE_URL);
+    CMFuturesClientImpl client = new CMFuturesClientImpl(PrivateConfig.API_KEY,
+        PrivateConfig.SECRET_KEY, PrivateConfig.CM_BASE_URL);
 
     try {
       String result = client.account().positionInformation(parameters);
